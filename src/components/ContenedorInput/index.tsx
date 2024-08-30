@@ -1,9 +1,10 @@
+import InputBoton from '../InputBoton'
 function ContenedorInput(){
+    //Este componente renderiza el contenedor con el componente InputBoton
     return(
         <>
         <div className = 'contenedor-input'>
-        <input type = 'text' id = 'input' className= 'input' placeholder = 'Ingrese una tarea'></input>
-        <button className = 'boton'>ADD</button>
+            <InputBoton/>
         </div>
         </>
     )

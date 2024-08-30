@@ -1,7 +1,6 @@
 export default function Lista(){
     return(
     <>
-    <div className = 'contenedor-tareas'>
         <ul className = "lista-tareas">
             <li className = "lista-item">
             <input type = "checkbox" className = "checkbox-tarea"/>
@@ -34,7 +33,6 @@ export default function Lista(){
             <button className = "boton-borrar-tarea">🗑️</button>
             </li>
         </ul>
-    </div>
     </>
     )
 }
