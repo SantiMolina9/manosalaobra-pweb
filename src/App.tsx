@@ -1,7 +1,7 @@
-import './App.css'
-import Encabezado from './components/Encabezado'
-import ContenedorInput from './components/ContenedorInput'
-import ContenedorTareas from './components/ContenedorTareas'
+import './App.css';
+import Encabezado from './components/Encabezado';
+import ContenedorInput from './components/ContenedorInput';
+import ContenedorTareas from './components/ContenedorTareas';
 import { useState } from 'react';
 
 interface Tarea {
@@ -9,13 +9,13 @@ interface Tarea {
   title: string;
   completada: boolean;
 }
-function App() {
 
+function App() {
   const [tareas, setTareas] = useState<Tarea[]>([]);
 
   const agregarTarea = (title: string) => {
     const nuevaTarea: Tarea = {
-      id: crypto.randomUUID(), //Use este metodo para hacerlo mas interesante
+      id: crypto.randomUUID(), // Use este método para hacerlo más interesante
       title,
       completada: false,
     };
@@ -33,23 +33,19 @@ function App() {
   const borrarTarea = (id: string) => {
     setTareas(tareas.filter((tarea) => tarea.id !== id));
   };
-  
+
   return (
-    <>
-    <Encabezado/>
-<<<<<<< Updated upstream
-    <ContenedorInput/>
-    <Lista/>
-    </>
-=======
-    <ContenedorInput onAddTodo = {agregarTarea}/>
-    <ContenedorTareas
-    tareas = {tareas}
-    onCompletarTarea = {completarTarea}
-    onBorrarTarea = {borrarTarea}/>
+    <div className='contenedor'>
+      <Encabezado />
+      <ContenedorInput onAddTodo={agregarTarea} />
+      <ContenedorTareas
+        tareas={tareas}
+        onCompletarTarea={completarTarea}
+        onBorrarTarea={borrarTarea}
+      />
     </div>
->>>>>>> Stashed changes
-  )
+  );
 }
 
-export default App
+export default App;
+

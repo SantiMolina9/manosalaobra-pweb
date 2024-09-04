@@ -1,11 +1,3 @@
-<<<<<<< Updated upstream
-function ContenedorInput(){
-    return(
-        <>
-        <div className = 'contenedor-input'>
-        <input type = 'text' id = 'input' className= 'input' placeholder = 'Ingrese una tarea'></input>
-        <button className = 'boton'>ADD</button>
-=======
 import InputBoton from '../InputBoton'
 
 interface Props{
@@ -17,7 +9,6 @@ const ContenedorInput: React.FC<Props> = ({onAddTodo}) => {
         <>
         <div className = 'contenedor-input'>
             <InputBoton guardarTodo={onAddTodo}/>
->>>>>>> Stashed changes
         </div>
         </>
     )
